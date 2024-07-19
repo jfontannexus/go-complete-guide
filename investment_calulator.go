@@ -1,4 +1,4 @@
-package investment_calulator
+package main
 
 import "fmt"
 
@@ -14,7 +14,7 @@ func main() {
 }
 func CalculateInvestment(investedAmount int, expectedReturnRate float64, years int) float64 {
 	// Calculate the investment
-	var futureValue = investedAmount * (1 + expectedReturnRate/100)
+	var futureValue = float64(investedAmount) * (1 + expectedReturnRate/100)
 	return futureValue
 
 }
