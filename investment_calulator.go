@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
 	// Call the function
@@ -14,7 +17,7 @@ func main() {
 }
 func CalculateInvestment(investedAmount int, expectedReturnRate float64, years int) float64 {
 	// Calculate the investment
-	var futureValue = float64(investedAmount) * (1 + expectedReturnRate/100)
+	var futureValue = float64(investedAmount) * math.Pow(1+expectedReturnRate/100)
 	return futureValue
 
 }
