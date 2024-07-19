@@ -8,11 +8,11 @@ import (
 func main() {
 	// Call the function
 
-	var investedAmount float64 = 1000
-	var expectedReturnRate float64 = 5.5
-	var years float64 = 10
+	var investedAmount, years float64 = 1000, 10 //multiple explicit type
+	expectedReturnRate := 5.5                    //infered type
+	var label, offset = "Investment", 10         //multiple inferred type
 	var result = CalculateInvestment(investedAmount, expectedReturnRate, years)
-	fmt.Println("The future value of the investment is: ", result)
+	fmt.Println(offset, " The future value of the ", label, " is: ", result)
 
 }
 func CalculateInvestment(investedAmount float64, expectedReturnRate float64, years float64) float64 {
