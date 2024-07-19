@@ -8,16 +8,16 @@ import (
 func main() {
 	// Call the function
 
-	var investedAmount = 1000
-	var expectedReturnRate = 5.5
-	var years = 10
+	var investedAmount float64 = 1000
+	var expectedReturnRate float64 = 5.5
+	var years float64 = 10
 	var result = CalculateInvestment(investedAmount, expectedReturnRate, years)
 	fmt.Println("The future value of the investment is: ", result)
 
 }
-func CalculateInvestment(investedAmount int, expectedReturnRate float64, years int) float64 {
+func CalculateInvestment(investedAmount float64, expectedReturnRate float64, years float64) float64 {
 	// Calculate the investment
-	var futureValue = float64(investedAmount) * math.Pow(1+expectedReturnRate/100)
-	return futureValue
+	return investedAmount *
+		math.Pow(1+expectedReturnRate/100, years)
 
 }
